@@ -1,9 +1,9 @@
 import './App.css';
-import * as Dash from 'dash-renderer'
+import * as Dash from 'dash-renderer' // side effect
 const React = window.React;
 
 const AppProvider = window.AppProvider;
-console.log(AppProvider);
+
 
 // hooks and config for the dash applications
 const hooks = { request_pre: null, request_post: null};
