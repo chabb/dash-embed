@@ -1,25 +1,29 @@
-import React from 'react';
-import logo from './logo.svg';
 import './App.css';
+import * as Dash from 'dash-renderer'
+const React = window.React;
+
+const AppProvider = window.AppProvider;
+console.log(AppProvider);
+
+// hooks and config for the dash applications
+const hooks = { request_pre: null, request_post: null};
+const config = {
+  "url_base_pathname": null,
+  "requests_pathname_prefix": "/",
+  "ui": false,
+  "props_check": false,
+  "show_undo_redo": false
+};
+
+const AppComponent = () => {
+  return (<>
+    <AppProvider hooks={hooks} dashConfig={config}  /> }
+  </>);
+};
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+      <AppComponent/>
   );
 }
 
